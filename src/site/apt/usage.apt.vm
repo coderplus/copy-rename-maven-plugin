@@ -88,16 +88,16 @@ Usage
               <goal>copy</goal>
             </goals>
             <configuration>
-              <FileSets>
-                <FileSet>
+              <fileSets>
+                <fileSet>
                   <sourceFile>src/someDirectory/test.environment.properties</sourceFile>
                   <destinationFile>target/someDir/environment.properties</destinationFile>
-                </FileSet>
-                <FileSet>
+                </fileSet>
+                <fileSet>
                   <sourceFile>src/someDirectory/test.logback.xml</sourceFile>
                   <destinationFile>target/someDir/logback.xml</destinationFile>
-                </FileSet>                
-              </FileSets>
+                </fileSet>                
+              </fileSets>
             </configuration>
           </execution>
         </executions>
@@ -189,16 +189,16 @@ Usage
               <goal>rename</goal>
             </goals>
             <configuration>
-              <FileSets>
-                <FileSet>
+              <fileSets>
+                <fileSet>
                   <sourceFile>src/someDirectory/test.environment.properties</sourceFile>
                   <destinationFile>target/someDir/environment.properties</destinationFile>
-                </FileSet>
-                <FileSet>
+                </fileSet>
+                <fileSet>
                   <sourceFile>src/someDirectory/test.logback.xml</sourceFile>
                   <destinationFile>target/someDir/logback.xml</destinationFile>
-                </FileSet>                
-              </FileSets>
+                </fileSet>                
+              </fileSets>
             </configuration>
           </execution>
         </executions>
@@ -229,16 +229,16 @@ Usage
               <goal>rename</goal>
             </goals>
             <configuration>
-              <FileSets>
-                <FileSet>
+              <fileSets>
+                <fileSet>
                   <sourceFile>src/someDirectory/test.environment.properties</sourceFile>
                   <destinationFile>target/someDir/environment.properties</destinationFile>
-                </FileSet>
-                <FileSet>
+                </fileSet>
+                <fileSet>
                   <sourceFile>src/someFolder/</sourceFile>
                   <destinationFile>target/someOtherFolder/</destinationFile>
-                </FileSet>                
-              </FileSets>
+                </fileSet>                
+              </fileSets>
             </configuration>
           </execution>
         </executions>
