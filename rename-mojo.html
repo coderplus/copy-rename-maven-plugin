@@ -7,11 +7,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Aneesh Joseph" />
-    <meta name="Date-Creation-yyyymmdd" content="20141025" />
     <meta name="Date-Revision-yyyymmdd" content="20141025" />
     <meta http-equiv="Content-Language" content="en" />
-    <title>Introduction</title>
+    <title>
+    copy-rename:rename</title>
     <link rel="stylesheet" href="./css/apache-maven-fluido-1.3.1.min.css" />
     <link rel="stylesheet" href="./css/site.css" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
@@ -61,10 +60,12 @@
                 <ul class="nav nav-list">
                     <li class="nav-header">Overview</li>
                               
-      <li class="active">
+      <li>
   
-            <a href="#"><i class="none"></i>Introduction</a>
-          </li>
+                          <a href="index.html" title="Introduction">
+          <i class="none"></i>
+        Introduction</a>
+            </li>
                 
       <li>
   
@@ -157,7 +158,104 @@
                 
         <div id="bodyColumn"  class="span9" >
                                   
-            <!-- The MIT License --><!--  --><!-- Copyright (c) 2004 --><!--  --><!-- Permission is hereby granted, free of charge, to any person obtaining a copy of --><!-- this software and associated documentation files (the "Software"), to deal in --><!-- the Software without restriction, including without limitation the rights to --><!-- use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies --><!-- of the Software, and to permit persons to whom the Software is furnished to do --><!-- so, subject to the following conditions: --><!--  --><!-- The above copyright notice and this permission notice shall be included in all --><!-- copies or substantial portions of the Software. --><!--  --><!-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR --><!-- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, --><!-- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE --><!-- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER --><!-- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, --><!-- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE --><!-- SOFTWARE. --><div class="section"><h2>Copy Rename Maven Plugin<a name="Copy_Rename_Maven_Plugin"></a></h2><!-- Plugin introduction, description, and other relevant information. --><ul><li>The copy-rename-maven-plugin helps in copying files or renaming files or directories during the Maven build lifecycle.</li><li>This plugin is compatible with Eclipse m2e and should work on both full and incremental builds</li></ul><div class="section"><h3>Goals Overview<a name="Goals_Overview"></a></h3><!-- General Information about the goals. --><ul><li><a href="./copy-mojo.html">copy-rename:copy</a> Copy files during maven build.</li><li><a href="./rename-mojo.html">copy-rename:rename</a> Rename files or directories during maven build.</li></ul></div><div class="section"><h3>Usage<a name="Usage"></a></h3><p>Instructions on how to use the Copy Rename Maven Plugin can be found on the <a href="./usage.html">usage page</a>.</p></div><div class="section"><h3>Help/Contact<a name="HelpContact"></a></h3><p>In case you would like report an issue, head over to the <a class="externalLink" href="https://github.com/coderplus/copy-rename-maven-plugin">GitHub Page</a>. If you would like to say hello, contact us at the <a class="externalLink" href="http://coderplus.com">CoderPlus website</a>.</p></div></div>
+            
+  
+    <div class="section"><h2>copy-rename:rename<a name="copy-rename:rename"></a></h2>
+      <p><b>Full name</b>:</p>
+      <p>com.coderplus.maven.plugins:copy-rename-maven-plugin:1.0-SNAPSHOT:rename</p>
+      <p><b>Description</b>:</p>
+      <div>Rename files or directories during build.</div>
+      <p><b>Attributes</b>:</p>
+      <ul>
+        <li>Requires a Maven project to be executed.</li>
+        <li>The goal is thread-safe and supports parallel builds.</li>
+        <li>Since version: <tt>1.0</tt>.</li>
+        <li>Binds by default to the <a class="externalLink" href="http://maven.apache.org/ref/current/maven-core/lifecycles.html">lifecycle phase</a>: <tt>generate-sources</tt>.</li>
+      </ul>
+      <div class="section"><h3>Optional Parameters<a name="Optional_Parameters"></a></h3>
+        <table class="table table-striped" border="0">
+          <tr class="a">
+            <th>Name</th>
+            <th>Type</th>
+            <th>Since</th>
+            <th>Description</th>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#destinationFile">destinationFile</a></b></td>
+            <td><tt>File</tt></td>
+            <td><tt>1.0</tt></td>
+            <td>The target file/directory name<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#fileSets">fileSets</a></b></td>
+            <td><tt>List</tt></td>
+            <td><tt>1.0</tt></td>
+            <td>Collection of FileSets to work on (FileSet contains sourceFile and
+destinationFile). See <a href="./usage.html">Usage</a> for details.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#ignoreFileNotFoundOnIncremental">ignoreFileNotFoundOnIncremental</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>1.0</tt></td>
+            <td>Ignore errors if the source file/directory was not found during
+incremental build<br /><b>Default value is</b>: <tt>true</tt>.<br /><b>User property is</b>: <tt>copy.ignoreFileNotFoundOnIncremental</tt>.</td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#overWrite">overWrite</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>1.0</tt></td>
+            <td>Ignore File Not Found errors during incremental build<br /><b>Default value is</b>: <tt>true</tt>.<br /><b>User property is</b>: <tt>copy.overWrite</tt>.</td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#sourceFile">sourceFile</a></b></td>
+            <td><tt>File</tt></td>
+            <td><tt>1.0</tt></td>
+            <td>The file/directory which has to be renamed<br /></td>
+          </tr>
+        </table>
+      </div>
+      <div class="section"><h3>Parameter Details<a name="Parameter_Details"></a></h3>
+        <p><b><a name="destinationFile">destinationFile</a>:</b></p>
+        <div>The target file/directory name</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.io.File</tt></li>
+          <li><b>Since</b>: <tt>1.0</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="fileSets">fileSets</a>:</b></p>
+        <div>Collection of FileSets to work on (FileSet contains sourceFile and
+destinationFile). See <a href="./usage.html">Usage</a> for details.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.util.List</tt></li>
+          <li><b>Since</b>: <tt>1.0</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="ignoreFileNotFoundOnIncremental">ignoreFileNotFoundOnIncremental</a>:</b></p>
+        <div>Ignore errors if the source file/directory was not found during
+incremental build</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Since</b>: <tt>1.0</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>User Property</b>: <tt>copy.ignoreFileNotFoundOnIncremental</tt></li>
+          <li><b>Default</b>: <tt>true</tt></li>
+        </ul><hr /><p><b><a name="overWrite">overWrite</a>:</b></p>
+        <div>Ignore File Not Found errors during incremental build</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Since</b>: <tt>1.0</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>User Property</b>: <tt>copy.overWrite</tt></li>
+          <li><b>Default</b>: <tt>true</tt></li>
+        </ul><hr /><p><b><a name="sourceFile">sourceFile</a>:</b></p>
+        <div>The file/directory which has to be renamed</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.io.File</tt></li>
+          <li><b>Since</b>: <tt>1.0</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul>
+      </div>
+    </div>
+  
+
                   </div>
             </div>
           </div>
