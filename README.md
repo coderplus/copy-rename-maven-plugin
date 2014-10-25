@@ -8,7 +8,7 @@ The copy-rename-maven-plugin helps in copying files or renaming files or directo
 
 ### How do I use it? ###
 
-Had over to the [Project Website](http://coderplus.github.io/copy-rename-maven-plugin/) for usage instructions
+Head over to the [Project Website](http://coderplus.github.io/copy-rename-maven-plugin/) for usage instructions
 
 ### How can I help the project? ###
 
