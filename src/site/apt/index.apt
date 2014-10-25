@@ -1,0 +1,58 @@
+ ------
+ Introduction
+ ------
+ Aneesh Joseph
+ ------
+ 2014-10-25
+ ------
+
+~~ The MIT License
+~~
+~~ Copyright (c) 2004
+~~
+~~ Permission is hereby granted, free of charge, to any person obtaining a copy of
+~~ this software and associated documentation files (the "Software"), to deal in
+~~ the Software without restriction, including without limitation the rights to
+~~ use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+~~ of the Software, and to permit persons to whom the Software is furnished to do
+~~ so, subject to the following conditions:
+~~
+~~ The above copyright notice and this permission notice shall be included in all
+~~ copies or substantial portions of the Software.
+~~
+~~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+~~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+~~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+~~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+~~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+~~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+~~ SOFTWARE.
+
+
+Copy Rename Maven Plugin
+
+~~  Plugin introduction, description, and other relevant information.
+
+  * The copy-rename-maven-plugin helps in copying files or renaming files or directories during the Maven build lifecycle.
+  
+  * This plugin is compatible with  Eclipse m2e and should work on both full and incremental builds
+
+* Goals Overview
+
+~~  General Information about the goals.
+
+  * {{{./copy-mojo.html}copy-rename:copy}} Copy files during maven build.
+  
+  * {{{./rename-mojo.html}copy-rename:rename}} Rename files or directories during maven build.
+
+
+* Usage
+
+  Instructions on how to use the Copy Rename Maven Plugin can be found on the {{{./usage.html}usage page}}.
+  
+* Help/Contact
+
+  In case you would like report an issue, head over to the {{{https://github.com/coderplus/copy-rename-maven-plugin}GitHub Page}}. If you would like to say hello, contact us at the {{{http://coderplus.com}CoderPlus website}}.
+	  
+
+
