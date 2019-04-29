@@ -88,6 +88,13 @@ extends AbstractMojo
 	@Parameter( property = "copy.ignoreFileNotFoundOnIncremental", defaultValue = "true" )
 	boolean ignoreFileNotFoundOnIncremental;
 
+	/**
+	 * Skip rename execution
+	 *
+	 * @since 1.1
+	 */
+	@Parameter( property = "copy.rename.skip", defaultValue = "false" )
+	boolean skip = false;
 
 	/**
 	 * @since 1.0
@@ -100,19 +107,23 @@ extends AbstractMojo
 
 	public void execute() throws MojoExecutionException
 	{
-		getLog().debug("Executing the copy-rename-maven-plugin");
-		if(fileSets!= null && fileSets.size() > 0){
-			for(FileSet fileSet: fileSets){
-				File srcFile = fileSet.getSourceFile();
-				File destFile = fileSet.getDestinationFile();
-				if(srcFile!=null){
-					copy(srcFile,destFile);
+		if(Boolean.FALSE.equals(skip)) {
+			getLog().debug("Executing the copy-rename-maven-plugin");
+			if (fileSets != null && fileSets.size() > 0) {
+				for (FileSet fileSet : fileSets) {
+					File srcFile = fileSet.getSourceFile();
+					File destFile = fileSet.getDestinationFile();
+					if (srcFile != null) {
+						copy(srcFile, destFile);
+					}
 				}
+			} else if (sourceFile != null) {
+				copy(sourceFile, destinationFile);
+			} else {
+				getLog().info("No Files to process");
 			}
-		} else if(sourceFile!= null){
-			copy(sourceFile,destinationFile);
-		} else{
-			getLog().info("No Files to process");
+		} else {
+			getLog().info("Skipped the copy-rename-maven-plugin");
 		}
 	}
 
