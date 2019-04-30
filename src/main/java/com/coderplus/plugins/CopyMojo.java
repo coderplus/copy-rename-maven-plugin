@@ -28,7 +28,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Component;
