@@ -28,6 +28,7 @@ public class FileSet {
 
 	private File sourceFile;
 	private File destinationFile;
+	private boolean ignoreFileIfNotExits;
 
 	public File getSourceFile() {
 		return sourceFile;
@@ -40,5 +41,11 @@ public class FileSet {
 	}
 	public void setDestinationFile(File destinationFile) {
 		this.destinationFile = destinationFile;
+	}
+	public boolean getIgnoreFileIfNotExits() {
+		return ignoreFileIfNotExits;
+	}
+	public void setIgnoreFileIfNotExits(boolean ignoreFileIfNotExits) {
+		this.ignoreFileIfNotExits = ignoreFileIfNotExits;
 	}
 }

@@ -63,6 +63,13 @@ extends AbstractMojo
 	 */
 	@Parameter( required = false )
 	private File destinationFile;
+	/**
+	 * Ignore renaming this file if it does not exist
+	 * 
+	 * @since 1.1
+	 */
+	@Parameter( required = false )
+	private boolean ignoreFileIfNotExits;
 
 	/**
 	 * Collection of FileSets to work on (FileSet contains sourceFile and destinationFile). See <a href="./usage.html">Usage</a> for details.
@@ -105,21 +112,25 @@ extends AbstractMojo
 			for(FileSet fileSet: fileSets){
 				File srcFile = fileSet.getSourceFile();
 				File destFile = fileSet.getDestinationFile();
+				boolean ignoreFileIfNotExits = fileSet.getIgnoreFileIfNotExits();
 				if(srcFile!=null){
-					copy(srcFile,destFile);
+					copy(srcFile,destFile,ignoreFileIfNotExits);
 				}
 			}
 		} else if(sourceFile!= null){
-			copy(sourceFile,destinationFile);
+			copy(sourceFile,destinationFile,ignoreFileIfNotExits);
 		} else{
 			getLog().info("No Files to process");
 		}
 	}
 
-	private void copy(File srcFile,File destFile) throws MojoExecutionException{
+	private void copy(File srcFile,File destFile, boolean ignoreFileIfNotExits) throws MojoExecutionException{
 
 		if(!srcFile.exists()){
-			if(ignoreFileNotFoundOnIncremental && buildContext.isIncremental()){
+			if (ignoreFileIfNotExits){
+				getLog().info("Renaming will be ignored because the file " + srcFile.getName() + " does not exist");
+			}
+			else if(ignoreFileNotFoundOnIncremental && buildContext.isIncremental()){
 				getLog().warn("sourceFile "+srcFile.getAbsolutePath()+ " not found during incremental build");
 			} else {
 				getLog().error("sourceFile "+srcFile.getAbsolutePath()+ " does not exist");
