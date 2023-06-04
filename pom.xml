@@ -66,6 +66,16 @@ SOFTWARE.
     <maven>${mavenVersion}</maven>
   </prerequisites>
 
+  <scm>
+    <connection>scm:git:git@github.com:coderplus/copy-rename-maven-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:coderplus/copy-rename-maven-plugin.git</developerConnection>
+    <url>scm:git:git@github.com:coderplus/copy-rename-maven-plugin.git</url>
+  </scm>
+
+  <issueManagement>
+    <url>https://github.com/coderplus/m2e-maven-dependency-plugin/issues</url>
+  </issueManagement>
+
   <properties>
     <mavenVersion>3.2.5</mavenVersion>
     <maven.plugin.plugin.version>3.9.0</maven.plugin.plugin.version>
