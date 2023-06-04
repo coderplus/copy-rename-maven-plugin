@@ -34,8 +34,8 @@ import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
+import org.codehaus.plexus.build.BuildContext;
 import org.codehaus.plexus.util.FileUtils;
-import org.sonatype.plexus.build.incremental.BuildContext;
 
 /**
  * Copy files during build

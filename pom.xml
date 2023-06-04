@@ -73,7 +73,7 @@ SOFTWARE.
   </scm>
 
   <issueManagement>
-    <url>https://github.com/coderplus/m2e-maven-dependency-plugin/issues</url>
+    <url>https://github.com/coderplus/copy-rename-maven-plugin/issues</url>
   </issueManagement>
 
   <properties>
@@ -102,9 +102,9 @@ SOFTWARE.
     </dependency>
 
     <dependency>
-      <groupId>org.sonatype.plexus</groupId>
+      <groupId>org.codehaus.plexus</groupId>
       <artifactId>plexus-build-api</artifactId>
-      <version>0.0.7</version>
+      <version>1.1.0</version>
     </dependency>
   </dependencies>
 
