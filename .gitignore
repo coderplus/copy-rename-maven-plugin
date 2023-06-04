@@ -7,3 +7,5 @@ release.properties
 .project
 .classpath
 .settings/
+nb-configuration.xml
+private/

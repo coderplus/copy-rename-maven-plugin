@@ -21,29 +21,3 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.coderplus.plugins;
-
-import java.io.File;
-
-public class FileSet {
-
-    private File sourceFile;
-
-    private File destinationFile;
-
-    public File getSourceFile() {
-        return sourceFile;
-    }
-
-    public void setSourceFile(File sourceFile) {
-        this.sourceFile = sourceFile;
-    }
-
-    public File getDestinationFile() {
-        return destinationFile;
-    }
-
-    public void setDestinationFile(File destinationFile) {
-        this.destinationFile = destinationFile;
-    }
-}
