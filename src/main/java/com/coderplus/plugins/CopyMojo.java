@@ -101,7 +101,7 @@ public class CopyMojo extends AbstractMojo {
     @Override
     public void execute() throws MojoExecutionException {
         getLog().debug("Executing the copy-rename-maven-plugin");
-        if (fileSets != null && fileSets.size() > 0) {
+        if (fileSets != null && !fileSets.isEmpty()) {
             for (FileSet fileSet : fileSets) {
                 File srcFile = fileSet.getSourceFile();
                 File destFile = fileSet.getDestinationFile();
